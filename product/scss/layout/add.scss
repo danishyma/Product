@@ -1,0 +1,56 @@
+// 1. Config files and helpers
+@import '../abstracts/colors';
+@import '../abstracts/fonts';
+@import '../abstracts/resets';
+@import '../abstracts/config';
+
+
+// 2. Vendor
+@import '../vendor/normalize';
+
+.form-container {
+    text-align: left;
+    margin-left: 3em;
+}
+
+.form-container label {
+    width: 8em;
+    display: inline-block;
+}
+
+input[type=text], select {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: .5em;
+    width: 20em;
+    margin: .5em 0;
+    
+    &:hover {
+        border-color: grey;
+    }
+
+    &:focus {
+        outline: 0;
+        border-color: #4697e4;
+    }
+}
+
+select {
+    width: 10em;
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+}
+
+.error {
+    color: $accent;
+}
+
+#descr-message {
+    color: $accent;
+}
+

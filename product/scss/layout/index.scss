@@ -1,0 +1,35 @@
+// 1. Config files and helpers
+@import '../abstracts/colors';
+@import '../abstracts/fonts';
+@import '../abstracts/resets';
+@import '../abstracts/config';
+
+
+// 2. Vendor
+@import '../vendor/normalize';
+
+.buttons {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width:  100%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    margin: 0 5em;
+
+    &.cancel {
+        padding: .5em 1.5em;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+
+        // & p {
+        //     margin: auto;
+        // }
+}

@@ -1,0 +1,47 @@
+// 1. Config files and helpers
+@import '../abstracts/colors';
+@import '../abstracts/fonts';
+@import '../abstracts/resets';
+@import '../abstracts/config';
+
+// 2. Vendor
+@import '../vendor/normalize';
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-rows: 1fr;
+    grid-gap: 2em;
+    margin: 3em;
+    justify-content: space-around;
+    grid-auto-flow: row dense;
+}
+
+.product-wrapper {
+    display: inline-block;
+    border: 1px solid black;
+    width: 100%;
+    padding: 1em 1em 2.5em;
+}
+
+.product-wrapper input {
+    float: left;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.pr-sku {
+    text-transform: uppercase;
+}
+
+.pr-name, .pr-type {
+    text-transform: capitalize;
+}

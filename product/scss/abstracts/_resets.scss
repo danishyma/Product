@@ -1,0 +1,22 @@
+:root {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    list-style: none;
+    text-decoration: none;
+    text-rendering: auto;
+}
+
+body {
+    color: $text-main;
+    background-color: $white;
+    text-align: center;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

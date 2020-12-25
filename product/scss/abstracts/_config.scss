@@ -1,0 +1,55 @@
+// Header = Title + buttons
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 3rem .5rem;
+
+    & h1 {
+        margin: 0;
+        padding:0;
+        font-size: 1.7rem;
+    }
+}
+
+// Buttons top page
+.btn {
+    display: inline-block;
+    padding: .5em 1.5em;
+    margin-left: .5em;
+    text-decoration: none;
+    background: transparent;
+    color: $accent;
+    border: 2px solid $accent;
+    outline: transparent;
+    transition: background-color .25s ease, color .25s ease, box-shadow .3s ease-in;
+    cursor: pointer;
+    font-weight: map-get($font-weights, "bold");
+    box-shadow: 3px 3px 0 $shadows;
+
+    &.cancel {
+        padding: .3em 1.5em;
+    }
+
+    &.delete {
+        padding: .7em 1.2em;
+    }
+
+    &:hover,
+    &:focus {
+        color: $text-inverse;
+        box-shadow: 2.5px 2.5px 0 $shadows, inset 15em 0 0 0 $accent;
+    }
+
+    &:active{
+        box-shadow: 0 0 0 $shadows;
+    }
+}
+
+// Separation lines
+hr {
+	margin: 1em auto;
+	border-top: 1px solid $main;
+	border-bottom: none;
+    width: 95%;
+}
