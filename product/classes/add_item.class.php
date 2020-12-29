@@ -8,26 +8,17 @@ class AddItem extends Db {
         $product_name = $_POST['product_name'];
         $product_price = $_POST['product_price'];
         $product_type = $_POST['product_type'];
+        $product_descr = $_POST['product_descr'];
+        $product_descr2 = $_POST['product_descr2'];
+        $product_descr3 = $_POST['product_descr3'];
 
-        function description($stmt) {
-            switch ($stmt) {       
-                case ("DVD-Disc"):
-                    $result = 'Size: ' . $_POST['product_descr'] .' MB';
-                    return $result;
-                    break;
-                case ("Book"):
-                    $result = 'Weight: ' . $_POST['product_descr'] .'KG';
-                    return $result;
-                    break;
-        
-                case ("Furniture"):
-                    $result = 'Dimension: ' . $_POST['product_descr'] .'x'. $_POST['product_descr2'] .'x'. $_POST['product_descr3'];
-                    return $result;
-                    break;
-            }
-        }
-        
-        $product_descr = description($product_type); 
+        $descr = (object) [
+            'DVD-Disc' =>  'Size: ' . $product_descr .' MB',
+            'Book' => 'Weight: ' . $product_descr .'KG',
+            'Furniture' => 'Dimension: ' . $product_descr .'x'. $product_descr2 .'x'. $product_descr3,
+        ];
+
+        $product_descr = $descr->$product_type; 
 
         $sql = "INSERT INTO product_list (product_sku, product_name, product_price, product_type, product_descr) VALUES ('$product_sku', '$product_name', '$product_price', '$product_type', '$product_descr')";
         $result  = $this->connect()->query($sql);
